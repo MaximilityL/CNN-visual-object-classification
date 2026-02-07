@@ -64,7 +64,7 @@ Where each ConvBlock consists of:
 1. **Clone the repository**:
 ```bash
 git clone <repository-url>
-cd windsurf-project-3
+cd CNN-visual-object-classification
 ```
 
 2. **Install dependencies**:
