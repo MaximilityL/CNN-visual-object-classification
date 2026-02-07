@@ -1,0 +1,113 @@
+================================================================================
+HYPERPARAMETER ANALYSIS REPORT
+================================================================================
+
+SUMMARY:
+Total Experiments: 10
+Successful Experiments: 10
+Failed Experiments: 0
+
+BEST EXPERIMENTS:
+
+BEST VALIDATION ACCURACY:
+  Experiment ID: 2
+  Value: 14.25061425061425
+  Hyperparameters:
+    learning_rate: 0.0003
+    batch_size: 16
+    num_conv_blocks: 4
+    conv_filters: [64, 128, 256, 512]
+    dropout_rate: 0.3
+
+BEST TRAINING ACCURACY:
+  Experiment ID: 5
+  Value: 16.875
+  Hyperparameters:
+    learning_rate: 0.0003
+    batch_size: 32
+    num_conv_blocks: 4
+    conv_filters: [64, 128, 256, 512]
+    dropout_rate: 0.3
+
+BEST VALIDATION LOSS:
+  Experiment ID: 2
+  Value: 3.5419530410033007
+  Hyperparameters:
+    learning_rate: 0.0003
+    batch_size: 16
+    num_conv_blocks: 4
+    conv_filters: [64, 128, 256, 512]
+    dropout_rate: 0.3
+
+HYPERPARAMETER EFFECTS:
+
+LEARNING_RATE:
+  0.0003: 12.1212 ± 1.8604 (n=9)
+  0.0005: 8.5995 ± 0.0000 (n=1)
+
+CONV_FILTERS:
+  (64, 128, 256, 512): 13.6773 ± 0.6449 (n=3)
+  (64, 128, 256): 13.0221 ± 0.2006 (n=3)
+  (32, 64): 9.3980 ± 0.8400 (n=4)
+
+DROPOUT_RATE:
+  0.3: 11.7690 ± 2.0570 (n=10)
+
+BATCH_SIZE:
+  32: 12.2850 ± 1.7831 (n=3)
+  48: 11.5479 ± 2.0945 (n=3)
+  16: 11.5479 ± 2.1490 (n=4)
+
+NUM_CONV_BLOCKS:
+  4: 13.6773 ± 0.6449 (n=3)
+  3: 13.0221 ± 0.2006 (n=3)
+  2: 9.3980 ± 0.8400 (n=4)
+
+TOP 5 EXPERIMENTS (by validation accuracy):
+
+1. Experiment 2:
+   Validation Accuracy: 14.2506
+   Training Accuracy: 14.1089
+   Validation Loss: 3.5420
+   Parameters: 2,129,458
+   learning_rate: 0.0003
+   batch_size: 16
+   num_conv_blocks: 4
+
+2. Experiment 5:
+   Validation Accuracy: 14.0049
+   Training Accuracy: 16.8750
+   Validation Loss: 3.5734
+   Parameters: 2,129,458
+   learning_rate: 0.0003
+   batch_size: 32
+   num_conv_blocks: 4
+
+3. Experiment 7:
+   Validation Accuracy: 13.2678
+   Training Accuracy: 11.6162
+   Validation Loss: 3.6759
+   Parameters: 686,130
+   learning_rate: 0.0003
+   batch_size: 48
+   num_conv_blocks: 3
+
+4. Experiment 4:
+   Validation Accuracy: 13.0221
+   Training Accuracy: 10.6250
+   Validation Loss: 3.6659
+   Parameters: 686,130
+   learning_rate: 0.0003
+   batch_size: 32
+   num_conv_blocks: 3
+
+5. Experiment 1:
+   Validation Accuracy: 12.7764
+   Training Accuracy: 13.4901
+   Validation Loss: 3.6753
+   Parameters: 686,130
+   learning_rate: 0.0003
+   batch_size: 16
+   num_conv_blocks: 3
+
+================================================================================

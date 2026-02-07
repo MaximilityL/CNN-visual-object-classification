@@ -1,0 +1,90 @@
+# CNN Configuration File
+# Visual Object Classification using Stanford Cars Dataset
+
+# Dataset Configuration
+dataset:
+  name: "stanford_cars"
+  data_dir: "dataset"
+  train_dir: "dataset/train"
+  test_dir: "dataset/test"
+  image_size: [256, 256]  # Higher resolution for better detail
+  num_classes: 50
+  max_images_per_class: 100  # Use all available images
+  batch_size: 32  # Better GPU utilization
+  num_workers: 0  # Disable multiprocessing to eliminate overhead
+
+# Model Architecture Configuration
+model:
+  name: "CompactCNN"
+  input_channels: 3
+  num_conv_blocks: 3
+  conv_filters: [64, 128, 256]
+  kernel_size: 3
+  padding: 1
+  activation: "gelu"  # Faster than gelu
+  pool_size: 2
+  pool_stride: 2
+  use_pooling: true
+  dropout_rate: 0.3  # Reduced for better learning
+  fc_hidden_size: 1024  # Increased
+  batch_norm: true
+  residual: true  # Add residual connections
+
+# Training Configuration
+training:
+  epochs: 50  # Increase for better convergence
+  learning_rate: 0.0005  # More stable learning
+  optimizer: "adamw"  # Better than adam
+  loss_function: "cross_entropy"
+  weight_decay: 1e-5  # Reduce overfitting
+  scheduler:
+    name: "cosine_annealing"
+    T_max: 50  # Match epochs
+    eta_min: 0.00001
+  warmup:
+    enabled: true
+    epochs: 5
+    start_lr: 0.0001
+  
+# GPU Configuration
+device:
+  use_gpu: true
+  gpu_type: "amd"  # For Radeon GPU support
+  device_name: "cuda"  # Will be set to "cuda" if available, else "cpu"
+
+# Evaluation Configuration
+evaluation:
+  save_metrics: true
+  metrics_file: "results/metrics.json"
+  confusion_matrix: true
+  classification_report: true
+  
+# Visualization Configuration
+visualization:
+  save_plots: true
+  plots_dir: "results/plots"
+  plot_loss_curves: true
+  plot_accuracy_curves: true
+  plot_sample_predictions: true
+  num_sample_predictions: 16
+
+# Hyperparameter Analysis Configuration
+hyperparameter_analysis:
+  enabled: true
+  learning_rates: [0.0003, 0.0005, 0.0007, 0.001]
+  batch_sizes: [16, 32, 48]
+  num_conv_blocks: [2, 3, 4]
+  filter_sizes: [[32, 64], [64, 128, 256], [64, 128, 256, 512]]
+  dropout_rates: [0.2, 0.3, 0.4]
+  results_dir: "results/hyperparameter_analysis"
+
+# Logging Configuration
+logging:
+  log_level: "INFO"
+  log_file: "logs/training.log"
+  save_model: true
+  model_save_dir: "models"
+  save_best_only: true
+  
+# Random Seed Configuration
+random_seed: 42

@@ -1,0 +1,312 @@
+{
+  "total_experiments": 10,
+  "successful_experiments": 10,
+  "failed_experiments": 0,
+  "best_experiments": {
+    "best_validation_accuracy": {
+      "experiment_id": 2,
+      "hyperparameters": {
+        "learning_rate": 0.0003,
+        "batch_size": 16,
+        "num_conv_blocks": 4,
+        "conv_filters": [
+          64,
+          128,
+          256,
+          512
+        ],
+        "dropout_rate": 0.3
+      },
+      "accuracy": 14.25061425061425
+    },
+    "best_training_accuracy": {
+      "experiment_id": 5,
+      "hyperparameters": {
+        "learning_rate": 0.0003,
+        "batch_size": 32,
+        "num_conv_blocks": 4,
+        "conv_filters": [
+          64,
+          128,
+          256,
+          512
+        ],
+        "dropout_rate": 0.3
+      },
+      "accuracy": 16.875
+    },
+    "best_validation_loss": {
+      "experiment_id": 2,
+      "hyperparameters": {
+        "learning_rate": 0.0003,
+        "batch_size": 16,
+        "num_conv_blocks": 4,
+        "conv_filters": [
+          64,
+          128,
+          256,
+          512
+        ],
+        "dropout_rate": 0.3
+      },
+      "loss": 3.5419530410033007
+    }
+  },
+  "hyperparameter_effects": {
+    "learning_rate": {
+      "0.0003": {
+        "mean_accuracy": 12.121212121212121,
+        "std_accuracy": 1.860412234496404,
+        "min_accuracy": 8.5995085995086,
+        "max_accuracy": 14.25061425061425,
+        "num_experiments": 9
+      },
+      "0.0005": {
+        "mean_accuracy": 8.5995085995086,
+        "std_accuracy": 0.0,
+        "min_accuracy": 8.5995085995086,
+        "max_accuracy": 8.5995085995086,
+        "num_experiments": 1
+      }
+    },
+    "conv_filters": {
+      "(32, 64)": {
+        "mean_accuracy": 9.398034398034397,
+        "std_accuracy": 0.8399750817676501,
+        "min_accuracy": 8.5995085995086,
+        "max_accuracy": 10.565110565110565,
+        "num_experiments": 4
+      },
+      "(64, 128, 256)": {
+        "mean_accuracy": 13.022113022113023,
+        "std_accuracy": 0.20061341054735252,
+        "min_accuracy": 12.776412776412776,
+        "max_accuracy": 13.267813267813267,
+        "num_experiments": 3
+      },
+      "(64, 128, 256, 512)": {
+        "mean_accuracy": 13.677313677313677,
+        "std_accuracy": 0.6448818897634568,
+        "min_accuracy": 12.776412776412776,
+        "max_accuracy": 14.25061425061425,
+        "num_experiments": 3
+      }
+    },
+    "dropout_rate": {
+      "0.3": {
+        "mean_accuracy": 11.769041769041769,
+        "std_accuracy": 2.0569968222064956,
+        "min_accuracy": 8.5995085995086,
+        "max_accuracy": 14.25061425061425,
+        "num_experiments": 10
+      }
+    },
+    "batch_size": {
+      "16": {
+        "mean_accuracy": 11.547911547911546,
+        "std_accuracy": 2.1489994698447052,
+        "min_accuracy": 8.5995085995086,
+        "max_accuracy": 14.25061425061425,
+        "num_experiments": 4
+      },
+      "32": {
+        "mean_accuracy": 12.285012285012286,
+        "std_accuracy": 1.7830909956656218,
+        "min_accuracy": 9.828009828009828,
+        "max_accuracy": 14.004914004914005,
+        "num_experiments": 3
+      },
+      "48": {
+        "mean_accuracy": 11.547911547911548,
+        "std_accuracy": 2.094465495912272,
+        "min_accuracy": 8.5995085995086,
+        "max_accuracy": 13.267813267813267,
+        "num_experiments": 3
+      }
+    },
+    "num_conv_blocks": {
+      "2": {
+        "mean_accuracy": 9.398034398034397,
+        "std_accuracy": 0.8399750817676501,
+        "min_accuracy": 8.5995085995086,
+        "max_accuracy": 10.565110565110565,
+        "num_experiments": 4
+      },
+      "3": {
+        "mean_accuracy": 13.022113022113023,
+        "std_accuracy": 0.20061341054735252,
+        "min_accuracy": 12.776412776412776,
+        "max_accuracy": 13.267813267813267,
+        "num_experiments": 3
+      },
+      "4": {
+        "mean_accuracy": 13.677313677313677,
+        "std_accuracy": 0.6448818897634568,
+        "min_accuracy": 12.776412776412776,
+        "max_accuracy": 14.25061425061425,
+        "num_experiments": 3
+      }
+    }
+  },
+  "summary_table": [
+    {
+      "experiment_id": 2,
+      "best_val_accuracy": 14.25061425061425,
+      "final_train_accuracy": 14.108910891089108,
+      "final_val_loss": 3.5419530410033007,
+      "total_parameters": 2129458,
+      "learning_rate": 0.0003,
+      "batch_size": 16,
+      "num_conv_blocks": 4,
+      "conv_filters": [
+        64,
+        128,
+        256,
+        512
+      ],
+      "dropout_rate": 0.3
+    },
+    {
+      "experiment_id": 5,
+      "best_val_accuracy": 14.004914004914005,
+      "final_train_accuracy": 16.875,
+      "final_val_loss": 3.5733710619119496,
+      "total_parameters": 2129458,
+      "learning_rate": 0.0003,
+      "batch_size": 32,
+      "num_conv_blocks": 4,
+      "conv_filters": [
+        64,
+        128,
+        256,
+        512
+      ],
+      "dropout_rate": 0.3
+    },
+    {
+      "experiment_id": 7,
+      "best_val_accuracy": 13.267813267813267,
+      "final_train_accuracy": 11.616161616161616,
+      "final_val_loss": 3.675940672556559,
+      "total_parameters": 686130,
+      "learning_rate": 0.0003,
+      "batch_size": 48,
+      "num_conv_blocks": 3,
+      "conv_filters": [
+        64,
+        128,
+        256
+      ],
+      "dropout_rate": 0.3
+    },
+    {
+      "experiment_id": 4,
+      "best_val_accuracy": 13.022113022113022,
+      "final_train_accuracy": 10.625,
+      "final_val_loss": 3.6658534086667576,
+      "total_parameters": 686130,
+      "learning_rate": 0.0003,
+      "batch_size": 32,
+      "num_conv_blocks": 3,
+      "conv_filters": [
+        64,
+        128,
+        256
+      ],
+      "dropout_rate": 0.3
+    },
+    {
+      "experiment_id": 1,
+      "best_val_accuracy": 12.776412776412776,
+      "final_train_accuracy": 13.490099009900991,
+      "final_val_loss": 3.6753213038811317,
+      "total_parameters": 686130,
+      "learning_rate": 0.0003,
+      "batch_size": 16,
+      "num_conv_blocks": 3,
+      "conv_filters": [
+        64,
+        128,
+        256
+      ],
+      "dropout_rate": 0.3
+    },
+    {
+      "experiment_id": 8,
+      "best_val_accuracy": 12.776412776412776,
+      "final_train_accuracy": 14.330808080808081,
+      "final_val_loss": 3.6489602989620633,
+      "total_parameters": 2129458,
+      "learning_rate": 0.0003,
+      "batch_size": 48,
+      "num_conv_blocks": 4,
+      "conv_filters": [
+        64,
+        128,
+        256,
+        512
+      ],
+      "dropout_rate": 0.3
+    },
+    {
+      "experiment_id": 0,
+      "best_val_accuracy": 10.565110565110565,
+      "final_train_accuracy": 8.044554455445544,
+      "final_val_loss": 3.772098963077252,
+      "total_parameters": 137394,
+      "learning_rate": 0.0003,
+      "batch_size": 16,
+      "num_conv_blocks": 2,
+      "conv_filters": [
+        32,
+        64
+      ],
+      "dropout_rate": 0.3
+    },
+    {
+      "experiment_id": 3,
+      "best_val_accuracy": 9.828009828009828,
+      "final_train_accuracy": 8.0,
+      "final_val_loss": 3.7752206325531006,
+      "total_parameters": 137394,
+      "learning_rate": 0.0003,
+      "batch_size": 32,
+      "num_conv_blocks": 2,
+      "conv_filters": [
+        32,
+        64
+      ],
+      "dropout_rate": 0.3
+    },
+    {
+      "experiment_id": 6,
+      "best_val_accuracy": 8.5995085995086,
+      "final_train_accuracy": 7.070707070707071,
+      "final_val_loss": 3.759966770807902,
+      "total_parameters": 137394,
+      "learning_rate": 0.0003,
+      "batch_size": 48,
+      "num_conv_blocks": 2,
+      "conv_filters": [
+        32,
+        64
+      ],
+      "dropout_rate": 0.3
+    },
+    {
+      "experiment_id": 9,
+      "best_val_accuracy": 8.5995085995086,
+      "final_train_accuracy": 7.735148514851486,
+      "final_val_loss": 3.775843088443463,
+      "total_parameters": 137394,
+      "learning_rate": 0.0005,
+      "batch_size": 16,
+      "num_conv_blocks": 2,
+      "conv_filters": [
+        32,
+        64
+      ],
+      "dropout_rate": 0.3
+    }
+  ]
+}
